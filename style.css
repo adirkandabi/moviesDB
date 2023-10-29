@@ -148,15 +148,6 @@ h1{
     margin-top:-390px;
     text-align: center;
 }
-.movie-description{
-    color: white;
-    font-size: 20px;
-    background-color: #151f30;
-    margin-left:414px;
-    margin-top:35px;
-    width:800px;
-    height: 200px;
-}
 .description{
     color:white;
     margin-left:414px;
@@ -171,12 +162,13 @@ h1{
     color: white;
     font-size: 20px;
     background-color: #151f30;
-    margin-top:-20; 
+    border-radius: 19px;
+    padding:8px;
     margin-left:414px; 
 }
 .date{
     color:white;
-    margin-left:556px;
+    margin-left:570px;
     margin-top:-20px;
     font-size: 20px;
     
@@ -185,12 +177,14 @@ h1{
     color: white;
     font-size: 20px;
     background-color: #151f30;
+    border-radius: 19px;
+    padding:8px;
     margin-left:414px;
     
 }
 .popularity-number{
     color:white;
-    margin-left:524px;
+    margin-left:540px;
     margin-top:-20px;
     font-size: 20px;
 }
@@ -198,11 +192,13 @@ h1{
     color: white;
     font-size: 20px;
     background-color: #151f30;
+    border-radius: 19px;
+    padding:8px;
     margin-left:414px;
 }
 .rate-number{
     color:white;
-    margin-left:480px;
+    margin-left:500px;
     margin-top:-20px;
     font-size: 20px; 
 }

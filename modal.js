@@ -21,7 +21,6 @@ export const renderModal=function(movie){
     }
     const html=`<img class="img" src="${imgSrc}" >
     <h1>${movie.title}</h1>
-    <span class="movie-description">Movie description:</span>
     <p class="description">${movie.overview}
     </p>
     <span class="release-date">Release date:</span>
