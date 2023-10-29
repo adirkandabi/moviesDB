@@ -4,19 +4,32 @@ import search from "./search.js"
 
 const modalContainer=document.querySelector('.modal')
 const modalContent=document.querySelector('.modal-content')
-const closeModal=document.querySelector('.close-button')
+const closeBtn=document.querySelector('.close-button')
 const sectionContainer=document.querySelector('#section')
+const logo=document.querySelector('.logo')
 
-closeModal.addEventListener('click',()=>{
+logo.addEventListener('click',(e)=>{
+    const pageTitle=document.querySelector('.page-title')
+    pageTitle.textContent='What`s popular today...'
+    init()
+})
+
+const closeModal=function(){
     modalContainer.style.display='none'
     document.querySelector('body').style.overflow='visible'
     modalContent.innerHTML=''
-})
+}
 
 const renderModal=function(movie){
     modalContainer.style.display='block'
     document.querySelector('body').style.overflow='hidden'
-    const html=`<img class="img" src="${IMG_PATH+movie.backdrop_path}" >
+    let imgSrc
+    if(!movie.backdrop_path){
+        imgSrc=`img_err.jpg`
+    }else{
+        imgSrc=IMG_PATH+movie.backdrop_path
+    }
+    const html=`<img class="img" src="${imgSrc}" >
     <h1>${movie.title}</h1>
     <span class="movie-description">Movie description:</span>
     <p class="description">${movie.overview}
@@ -29,6 +42,14 @@ const renderModal=function(movie){
     <p class="rate-number">${movie.vote_average} (${movie.vote_count})</p>`
     modalContent.insertAdjacentHTML('afterbegin',html)
 }
+
+closeBtn.addEventListener('click',closeModal)
+document.addEventListener('keydown',(e)=>{
+    if(e.key==='Escape'){
+        closeModal()
+    }
+})
+
 
 const getData=async function(page){
     try{

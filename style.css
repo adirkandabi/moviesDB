@@ -14,6 +14,17 @@ body{
 .topnav .search-container{
     float:right;
 }
+.logo{
+    cursor: pointer;
+    margin-left: 180px;
+    border-radius: 19px;
+    width:60px;
+    height: 60px;
+    transition: transform 0.3s;
+}
+.logo:hover{
+    transform: scale(1.45);
+}
 .page-title{
     color:#acaeaf;
     font-size: 30px;
@@ -57,28 +68,32 @@ h3{
     width: 285px;
     text-align: center;
     background-color: #151f30;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.card:hover{
+    transform: scale(1.05); 
+    background-color: #1d2b3d; 
 }
 
-/* .page{
-    border-radius: 19px;
-    background-color: antiquewhite;
-    padding: 5px;
-    font-size: 20px;
-    font-weight: bolder;
-    text-align: center;
-} */
 .pagination__btn-prev{
 margin-top: 20px ;
 margin-bottom: 20px ;
+margin-left:30px;
 float:left;
 background-color:rgb(177, 174, 204);
 font-size: 20px;
 border-radius: 19px;
 border-color:rgb(177, 174, 204);
+cursor: pointer;
 font:bolder;
 text-align: center;
+transition: transform 0.3s;
+}
+.pagination__btn-prev:hover{
+transform: scale(1.15);
 }
 .pagination__btn-next{
+    margin-right: 30px;
     margin-top: 20px ;
     margin-bottom: 20px ;
     float:right;
@@ -86,10 +101,14 @@ text-align: center;
     font-size: 20px;
     border-radius: 19px;
     border-color: rgb(177, 174, 204);
+    cursor: pointer;
     font:bolder;
     text-align: center;
-    }
-
+    transition: transform 0.3s;
+}
+.pagination__btn-next:hover{
+transform: scale(1.15);
+}
 .modal {
     display:none;
     position: fixed;
@@ -98,7 +117,7 @@ text-align: center;
     width: 1300px;
     height: 800px;
     background-color: rgba(0, 0, 0, 0.89);
-}
+  }
 
 .img{    
     padding:30px;
@@ -134,15 +153,15 @@ h1{
    
     font-size: 20px;
     width:800px;
-    height: 200px;
+    height: auto;
     
 }
 .release-date{
     color: white;
     font-size: 20px;
     background-color: #151f30;
+    margin-top:-20; 
     margin-left:414px; 
-    margin-top:30px 
 }
 .date{
     color:white;

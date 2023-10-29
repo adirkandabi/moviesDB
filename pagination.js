@@ -8,10 +8,9 @@
     addHandlerClick(handler){
         this._pagiContainer.addEventListener('click',(e)=>{
         const btn=e.target.closest('.btn--inline');
-        console.log(btn);
-        
-        const goToPage=(+btn.dataset.page)
         this._clear()
+        const goToPage=(+btn.dataset.page)
+        
         window.scrollTo({ top: 0, behavior: 'smooth' });
         
         handler(goToPage)
@@ -20,8 +19,8 @@
     _clear(){
         this._pagiContainer.innerHTML=''
     }
-
     renderBtns(pagesAmount,page){
+        this._clear()
         if(page===1 && page<pagesAmount){
             this._generateMarkup('next',page)
         }

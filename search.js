@@ -1,8 +1,6 @@
 import { API_KEY } from "./config.js"
 import pagination from "./pagination.js"
 
-
-
 class Search{
     _searchContainer=document.querySelector('.search-container')
     _query=document.querySelector('.query')
@@ -10,6 +8,7 @@ class Search{
         this._searchContainer.addEventListener('submit',(e)=>{
            e.preventDefault()
            const res=this._query.value
+           this._query.value=''
            this.searchQuery(handler,res)
         })
     }
@@ -18,8 +17,10 @@ class Search{
             const data=await fetch(`https://api.themoviedb.org/3/search/movie?query=${query}
             &api_key=${API_KEY}`)
             const res=await data.json()
-            console.log(res);
-             pagination.renderBtns(res.total_pages,res.page)
+            if(res){
+                document.querySelector('.page-title').textContent=`The results for '${query}'` 
+            }
+            pagination._clear()
              handler(res)
         }catch(err){
             alert(err)
