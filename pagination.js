@@ -10,9 +10,7 @@
         const btn=e.target.closest('.btn--inline');
         this._clear()
         const goToPage=(+btn.dataset.page)
-        
         window.scrollTo({ top: 0, behavior: 'smooth' });
-        
         handler(goToPage)
      })
     }

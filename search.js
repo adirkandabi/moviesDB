@@ -1,5 +1,6 @@
 import { API_KEY } from "./config.js"
 import pagination from "./pagination.js"
+import { errorHandler,disableErrorMessage } from "./controller.js"
 
 class Search{
     _searchContainer=document.querySelector('.search-container')
@@ -20,10 +21,16 @@ class Search{
             if(res){
                 document.querySelector('.page-title').textContent=`The results for '${query}'` 
             }
+            if(!res.results.length){
+                errorHandler('Could not found your query')  
+                return  
+            }
+            disableErrorMessage()
             pagination._clear()
              handler(res)
         }catch(err){
-            alert(err)
+            console.error(err)
+            errorHandler('Could not found your query')
         }
     }   
 
