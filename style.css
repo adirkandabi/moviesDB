@@ -17,12 +17,13 @@ body {
   border-radius: 19px;
   display: flex;
   align-items: center;
+  margin-right: 80px;
   width: 60px;
   height: 60px;
   transition: transform 0.3s;
 }
 .logo:hover {
-  transform: scale(1.45);
+  transform: scale(1.25);
 }
 .page-title {
   color: #acaeaf;
