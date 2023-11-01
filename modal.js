@@ -1,17 +1,20 @@
 import { IMG_PATH } from "./config.js";
 
 const modalContainer = document.querySelector(".modal");
+const overlay = document.querySelector(".modal-overlay");
 const modalContent = document.querySelector(".modal-content");
 const closeBtn = document.querySelector(".close-button");
 
 const closeModal = function () {
   modalContainer.style.display = "none";
+  overlay.style.display = "none";
   document.querySelector("body").style.overflow = "visible";
   modalContent.innerHTML = "";
 };
 
 export const renderModal = function (movie) {
   modalContainer.style.display = "block";
+  overlay.style.display = "block";
   document.querySelector("body").style.overflow = "hidden";
   let imgSrc;
   if (!movie.backdrop_path) {
@@ -33,6 +36,7 @@ export const renderModal = function (movie) {
 };
 
 closeBtn.addEventListener("click", closeModal);
+overlay.addEventListener("click", closeModal);
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeModal();
