@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MovieDB</title>
-    <link rel="icon" href="logo.jpg" type="image/jpeg" >
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="icon" href="logo.jpg" type="image/jpeg" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-<div class="topnav">
-    <a class="active" href="#"></a>
-    <div class="page-title">What`s popular today...</div>
-    <img class="logo" src="logo.jpg" title= "Return to main menu" >
-    <div class="search-container">
+  <body>
+    <div class="topnav">
+      <div class="page-title">What`s popular today...</div>
+      <img class="logo" src="logo.jpg" title="Return to main menu" />
+      <div class="search-container">
         <form role="search" class="form">
-            <input type="text" class="query" placeholder="Search for a movie...">
+          <input
+            type="text"
+            class="query"
+            placeholder="Search for a movie..."
+          />
         </form>
+      </div>
     </div>
-</div>
-<h1 class="error-message">Could not found your query</h1>
-      
-<section class="section">
-    <!-- <div class="row">
+    <h1 class="error-message">Could not found your query</h1>
+
+    <section class="section">
+      <!-- <div class="row">
         <div class="column">
             <div class="card">
                 <center><img src="image.jpg" class="thumbnail"></center>
@@ -30,15 +33,15 @@
             </div>
         </div>
     </div>   -->
-</section>
-<div class="pagination">
-    <!-- <button class="btn--inline pagination__btn-prev">&leftarrow; page 1</button>-->
-        <span class="page">1</span>
-    <!--<button class="btn--inline pagination__btn-next">page 3 &rightarrow;</button> -->
-</div>
-<div id="modal" class="modal">
-    <span class="close-button">&times;</span>
-    <div class="modal-content">
+    </section>
+    <div class="pagination">
+      <!-- <button class="btn--inline pagination__btn-prev">&leftarrow; page 1</button>-->
+      <span class="page">1</span>
+      <!--<button class="btn--inline pagination__btn-next">page 3 &rightarrow;</button> -->
+    </div>
+    <div id="modal" class="modal">
+      <span class="close-button">&times;</span>
+      <div class="modal-content">
         <!-- <img class="img" src="image.jpg" >
         <h1>Spider-Man</h1>
         <p class="description"> Recently fired and desperate for work,
@@ -50,11 +53,11 @@
         <span class="release-date">Release date:</span>
         <p class="date">30-03-1999</p>
         <span class="popularity">Popularity:</span>
-        <p class="popularity-number">278,910</p>
+        <p class="popularity-number">278,910</p> /
         <span class="rate">Rate:</span>
         <p class="rate-number">4.7 (27,000)</p> -->
+      </div>
     </div>
-</div>
-</body>
-<script type="module" src="controller.js"></script>
+  </body>
+  <script type="module" src="controller.js"></script>
 </html>
